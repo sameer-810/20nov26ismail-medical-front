@@ -1,0 +1,99 @@
+{
+  "expo": {
+    "name": "Ashoke Medical",
+    "slug": "ashoke-medical",
+    "version": "1.0.0",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "scheme": "ashokemedical",
+    "ios": {
+      "bundleIdentifier": "com.ashokemedical.app",
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Ashoke Medical uses the camera to scan barcodes and read the batch number on medicine packs, and to photograph supplier bills and cheques, for example to add a strip of paracetamol to a sale in one scan.",
+        "NSPhotoLibraryUsageDescription": "Ashoke Medical uses your photo library to import a picture of a supplier bill or cheque you have already taken, so its details can be filled in for you.",
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.CAMERA",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.ashokemedical.app",
+      "softwareKeyboardLayoutMode": "resize",
+      "blockedPermissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#FFFFFF"
+        }
+      ],
+      [
+        "expo-secure-store",
+        {
+          "faceIDPermission": false
+        }
+      ],
+      "expo-localization",
+      "expo-font",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Ashoke Medical uses the camera to scan barcodes and read the batch number on medicine packs, and to photograph supplier bills and cheques, for example to add a strip of paracetamol to a sale in one scan.",
+          "microphonePermission": false,
+          "recordAudioAndroidPermission": false
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Ashoke Medical uses your photo library to import a picture of a supplier bill or cheque you have already taken, so its details can be filled in for you.",
+          "cameraPermission": "Ashoke Medical uses the camera to scan barcodes and read the batch number on medicine packs, and to photograph supplier bills and cheques, for example to add a strip of paracetamol to a sale in one scan.",
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": false
+        }
+      ],
+      "./plugins/withReleaseSigning",
+      "./plugins/withAndroidBuildTuning"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "0477ea11-913a-4fc4-a2cc-e14b477b0456"
+      }
+    },
+    "owner": "medicalashoks-team"
+  }
+}
