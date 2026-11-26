@@ -1,5 +1,5 @@
 /**
- * Ashoke Medical Design System — "quiet premium" (2026 rev).
+ * Ismail Medical Design System — "quiet premium" (2026 rev).
  *
  * The previous system was a consumer-app language (Poppins headings, 26px KPI
  * numbers in 104px colour-coded cards, gradient banners) applied to a
@@ -11,7 +11,7 @@
  *   3. Weights stop at 600.
  *   4. Radii locked to 4 / 6 / 8 / 10 / 12.
  *   5. Borders, not shadows. Shadow is for things that genuinely float.
- *   6. The brand green is an ACCENT — primary action, active nav, links,
+ *   6. The brand blue is an ACCENT — primary action, active nav, links,
  *      focus. ~90% of pixels should be neutral.
  *
  * Token keys are unchanged, so every existing call-site re-skins from here.
@@ -19,7 +19,7 @@
 
 export const palette = {
   /**
-   * Ink — near-black tinted very slightly green so it belongs to the brand
+   * Ink — near-black tinted navy so it belongs to the brand
    * family. Pure #000 on pure #FFF is the highest-contrast, cheapest-looking
    * pairing in UI; every considered system tints both ends.
    */
@@ -37,38 +37,39 @@ export const palette = {
   },
 
   /**
-   * Primary brand — Ashoke Medical green. 600 is sampled straight from the logo
-   * (the "Chemist & Druggist" band, #2E9A1E); the rest is a tonal ramp around it at the
-   * same hue, so the UI and the logo are the same colour family.
+   * Primary brand — Ismail Medical blue. 900, 600 and 500 are sampled straight
+   * from the logo (the "Ismail" navy #00206D, the heart/hand royal blue #0058C6,
+   * the "Medical" blue #0B78DF); the rest is a tonal ramp between them, so the
+   * UI and the logo are the same colour family.
    *
    * NOTE: the key is still `teal` because ~100 call-sites reference
    * `palette.teal[...]`. `palette.brand` is the preferred alias going forward.
    */
   teal: {
-    900: "#123D0A",
-    800: "#1A5A10",
-    700: "#237A16",
-    600: "#2E9A1E", // ← exact logo green
-    500: "#45B332",
-    400: "#66C954",
-    300: "#97DC88",
-    200: "#C2EBB8",
-    100: "#E0F5DB",
-    50: "#F1FBEE",
+    900: "#00206D", // ← exact logo navy ("Ismail")
+    800: "#003A9E",
+    700: "#0049B0",
+    600: "#0058C6", // ← exact logo royal blue (heart, hand)
+    500: "#0B78DF", // ← exact logo blue ("Medical")
+    400: "#3D96EA",
+    300: "#85BDF2",
+    200: "#BBDAF8",
+    100: "#DDEDFC",
+    50: "#EFF6FE",
   },
 
-  // Accent — Ashoke orange. The legacy `cobalt` key keeps existing call-sites stable.
+  // Accent — the logo's sky-blue swoosh. The legacy `cobalt` key keeps existing call-sites stable.
   cobalt: {
-    900: "#7A3600",
-    800: "#974600",
-    700: "#AD5700",
-    600: "#FF9933", // exact logo orange
-    500: "#FFB866",
-    400: "#FFC985",
-    300: "#FFD9A3",
-    200: "#FFE5C2",
-    100: "#FFF0DE",
-    50: "#FFF8F0",
+    900: "#04476A",
+    800: "#055A85",
+    700: "#0670A3",
+    600: "#03ACF1", // exact logo sky blue (swoosh)
+    500: "#3BC0F4",
+    400: "#6FD0F7",
+    300: "#A0E0FA",
+    200: "#C8EDFC",
+    100: "#E3F6FE",
+    50: "#F2FBFF",
   },
 
   // Cool neutral surfaces, tinted to match ink.
@@ -106,9 +107,9 @@ export const palette = {
     tertiary: "#62708A",
     disabled: "#A4AEC0",
     inverse: "#FFFFFF",
-    accent: "#237A16", // brand green 700 — passes AA on white
-    // 5.03:1 on white — links are body-size text and need the full AA floor.
-    link: "#AD5700",
+    accent: "#0049B0", // brand blue 700 — passes AA on white
+    // 6.4:1 on white — links are body-size text and need the full AA floor.
+    link: "#0058C6",
   },
 
   border: {
@@ -118,7 +119,7 @@ export const palette = {
     default: "#E1E6EE",
     /** Input borders and anything that must read as interactive. */
     strong: "#CBD3DF",
-    focus: "#2E9A1E",
+    focus: "#0058C6",
     dark: "#22324F",
   },
 
@@ -126,7 +127,7 @@ export const palette = {
   success: { bg: "#E4F5EE", text: "#0F7A54", border: "#B7E6D3" }, // 4.73:1
   warning: { bg: "#FBF1DC", text: "#8A5A11", border: "#F3DCA6" }, // 5.27:1
   danger: { bg: "#FCEAE7", text: "#B32D1D", border: "#F6C9C1" }, // 5.46:1
-  info: { bg: "#FFF0DE", text: "#AD5700", border: "#FFE5C2" }, // 5.03:1
+  info: { bg: "#E3F6FE", text: "#0670A3", border: "#C8EDFC" }, // 5.0:1
 } as const;
 
 /**
@@ -151,57 +152,57 @@ export const brand = palette.teal;
  */
 export const darkPalette = {
   ink: {
-    900: "#F2F6F5",
-    800: "#E4EBE9",
-    700: "#CBD5D2",
-    600: "#A7B4B1",
-    500: "#859390",
-    400: "#6B7976",
-    300: "#4B5956",
-    200: "#33403D",
-    100: "#26312E",
-    50: "#1C2523",
+    900: "#F2F5FA",
+    800: "#E4E9F1",
+    700: "#CBD3DF",
+    600: "#A7B2C3",
+    500: "#8592A6",
+    400: "#6B788C",
+    300: "#4B5769",
+    200: "#333E4F",
+    100: "#262F3D",
+    50: "#1C2430",
   },
   surface: {
     /** Cards and panels — one step above the canvas. */
-    primary: "#1A2321",
+    primary: "#18202E",
     /** App canvas. Not black: #000 shows OLED smear on scroll. */
-    secondary: "#111917",
-    tertiary: "#212C29",
-    raised: "#212C29",
+    secondary: "#10161F",
+    tertiary: "#202A3A",
+    raised: "#202A3A",
     /** Wells, table headers, pressed rows. */
-    sunken: "#141D1B",
-    dark: "#0B110F",
-    darkRaised: "#1A2321",
+    sunken: "#131A25",
+    dark: "#0A0F17",
+    darkRaised: "#18202E",
   },
   text: {
-    primary: "#E8EDEC",
-    secondary: "#B4C0BD",
-    tertiary: "#8A9793",
-    disabled: "#5E6B68",
+    primary: "#E8EDF4",
+    secondary: "#B4BECC",
+    tertiary: "#8A96A8",
+    disabled: "#5E6A7C",
     inverse: "#0E1B33",
-    /** Lifted from 700 to 400: the deep green is unreadable on a dark ground. */
-    accent: "#66C954",
-    link: "#FFB866",
+    /** Lifted from 700 to 400: the deep blue is unreadable on a dark ground. */
+    accent: "#6CB6F5",
+    link: "#6FD0F7",
   },
   border: {
-    subtle: "#26312E",
-    default: "#2F3B38",
-    strong: "#41504C",
-    focus: "#66C954",
-    dark: "#0B110F",
+    subtle: "#222C3B",
+    default: "#2B3647",
+    strong: "#3C4A5F",
+    focus: "#6CB6F5",
+    dark: "#0A0F17",
   },
   // Deep fills, light text — same 4.5:1 discipline as the light set.
   success: { bg: "#12301F", text: "#5FD498", border: "#1F5133" },
   warning: { bg: "#33260E", text: "#E5B45C", border: "#57401A" },
   danger: { bg: "#3A1A16", text: "#F08C7C", border: "#5E2A24" },
-  info: { bg: "#3D240F", text: "#FFB866", border: "#6B3B14" },
+  info: { bg: "#0E2E44", text: "#6FD0F7", border: "#15476A" },
 } as const;
 
 /** Status accents, re-tuned for a dark ground. */
 export const darkAccents = {
-  teal: { color: "#66C954", tint: "#12301F" },
-  blue: { color: "#FFB866", tint: "#3D240F" },
+  teal: { color: "#6CB6F5", tint: "#12284A" },
+  blue: { color: "#6FD0F7", tint: "#0E2E44" },
   amber: { color: "#E5B45C", tint: "#33260E" },
   red: { color: "#F08C7C", tint: "#3A1A16" },
   purple: { color: "#A79BF0", tint: "#241F3D" },
@@ -218,8 +219,8 @@ export const darkAccents = {
  * no status gets no colour at all.
  */
 export const accents = {
-  teal: { color: "#2E9A1E", tint: "#E9F7F0" },
-  blue: { color: "#FF9933", tint: "#FFF0DE" },
+  teal: { color: "#0058C6", tint: "#EFF6FE" },
+  blue: { color: "#0B78DF", tint: "#E3F6FE" },
   amber: { color: "#C1801C", tint: "#FBF1DC" },
   red: { color: "#DB4B3D", tint: "#FCEAE7" },
   purple: { color: "#7C6FE0", tint: "#EEECFB" },
@@ -481,17 +482,18 @@ export const motion = {
 /**
  * Gradients.
  *
- * The green→orange sweep is retired from product surfaces: a gradient banner at
+ * The brand sweep is retired from product surfaces: a gradient banner at
  * the top of a working dashboard is decoration where the user wants density,
  * and it was the loudest thing on the screen. These are kept for auth/marketing
- * panels, where a brand moment is the actual job.
+ * panels, where a brand moment is the actual job. `hero` follows the logo:
+ * sky-blue swoosh → royal blue → "Ismail" navy.
  */
 export const gradients = {
-  hero: ["#FF9933", "#D97600", "#237A16"] as const,
-  teal: ["#2E9A1E", "#1A5A10"] as const,
-  cobalt: ["#FFB866", "#AD5700"] as const,
+  hero: ["#03ACF1", "#0058C6", "#00206D"] as const,
+  teal: ["#0058C6", "#003A9E"] as const,
+  cobalt: ["#3BC0F4", "#0670A3"] as const,
   light: ["#FFFFFF", "#F6F8FA"] as const,
-  mist: ["#F1FBEE", "#FFF8F0"] as const,
+  mist: ["#EFF6FE", "#F2FBFF"] as const,
 } as const;
 
 /** Glass — translucent frosted panels for overlays over gradients/imagery. */

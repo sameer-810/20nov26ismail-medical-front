@@ -110,7 +110,7 @@ export function Sidebar({
             source={require("../../assets/brand/mark.png")}
             style={styles.mark}
             resizeMode="contain"
-            accessibilityLabel="Ashoke Medical"
+            accessibilityLabel="Ismail Medical"
           />
         ) : (
           <>
@@ -119,7 +119,7 @@ export function Sidebar({
                 source={require("../../assets/brand/wordmark.png")}
                 style={styles.wordmark}
                 resizeMode="contain"
-                accessibilityLabel="Ashoke Medical"
+                accessibilityLabel="Ismail Medical"
               />
               <Text variant="caption" tone="tertiary" numberOfLines={1}>
                 {organization?.name || "Inventory"}
@@ -340,9 +340,9 @@ const styles = StyleSheet.create({
     borderRightWidth: 1,
     borderRightColor: palette.border.default,
   },
-  /** Brand wordmark in the expanded sidebar (720x202 source → 3.56:1). */
+  /** Brand wordmark in the expanded sidebar (910x240 source → 3.79:1). */
   wordmark: {
-    width: 164,
+    width: 174,
     height: 46,
   },
   /** The square mark shown when the rail is collapsed. */

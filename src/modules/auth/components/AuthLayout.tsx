@@ -50,14 +50,16 @@ export function AuthLayout({ title, subtitle, children }: Props) {
             style={{ flex: 1, justifyContent: "space-between", padding: 48 }}
           >
             <HStack gap={12} align="center">
-              <Image
-                source={require("../../../../assets/brand/mark.png")}
-                style={styles.brandMark}
-                resizeMode="contain"
-                accessibilityLabel="Ashoke Medical"
-              />
+              <View style={styles.brandTile}>
+                <Image
+                  source={require("../../../../assets/brand/mark.png")}
+                  style={styles.brandMark}
+                  resizeMode="contain"
+                  accessibilityLabel="Ismail Medical"
+                />
+              </View>
               <Text variant="h2" tone="inverse">
-                Ashoke Medical
+                Ismail Medical
               </Text>
             </HStack>
 
@@ -107,7 +109,7 @@ export function AuthLayout({ title, subtitle, children }: Props) {
                     source={require("../../../../assets/brand/wordmark.png")}
                     style={[styles.authWordmark, { marginBottom: 28 }]}
                     resizeMode="contain"
-                    accessibilityLabel="Ashoke Medical"
+                    accessibilityLabel="Ismail Medical"
                   />
                 )}
                 <VStack gap={6} style={{ marginBottom: 24 }}>
@@ -130,15 +132,25 @@ export function AuthLayout({ title, subtitle, children }: Props) {
 
 const styles = StyleSheet.create({
   brandPanel: { flex: 1, maxWidth: 520 },
-  /** The mark on its white tile — reads cleanly on the brand gradient. */
-  brandMark: {
-    width: 44,
-    height: 44,
+  /**
+   * The mark is blue on transparent, so it needs a white tile to read on the
+   * blue brand gradient.
+   */
+  brandTile: {
+    width: 48,
+    height: 48,
     borderRadius: radius.md,
+    backgroundColor: "#FFFFFF",
+    alignItems: "center",
+    justifyContent: "center",
   },
-  /** Full wordmark above the form on narrow screens (light background). */
+  brandMark: {
+    width: 38,
+    height: 38,
+  },
+  /** Full wordmark above the form on narrow screens (910x240 source → 3.79:1). */
   authWordmark: {
-    width: 214,
+    width: 228,
     height: 60,
   },
   hIcon: {
