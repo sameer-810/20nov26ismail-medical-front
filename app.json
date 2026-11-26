@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Ismail Medical",
-    "slug": "ashoke-medical",
+    "slug": "ismail-medical",
     "version": "1.0.0",
     "runtimeVersion": {
       "policy": "appVersion"
@@ -91,9 +91,9 @@
     ],
     "extra": {
       "eas": {
-        "projectId": "0477ea11-913a-4fc4-a2cc-e14b477b0456"
+        "projectId": "17949d82-27ee-46ef-bcd2-7f661596ebe0"
       }
     },
-    "owner": "medicalashoks-team"
+    "owner": "ismail-medicals-team"
   }
 }
