@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Ashoke Medical",
+    "name": "Ismail Medical",
     "slug": "ashoke-medical",
     "version": "1.0.0",
     "runtimeVersion": {
@@ -9,13 +9,13 @@
     "orientation": "default",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "scheme": "ashokemedical",
+    "scheme": "ismailmedical",
     "ios": {
-      "bundleIdentifier": "com.ashokemedical.app",
+      "bundleIdentifier": "com.ismailmedical.app",
       "supportsTablet": true,
       "infoPlist": {
-        "NSCameraUsageDescription": "Ashoke Medical uses the camera to scan barcodes and read the batch number on medicine packs, and to photograph supplier bills and cheques, for example to add a strip of paracetamol to a sale in one scan.",
-        "NSPhotoLibraryUsageDescription": "Ashoke Medical uses your photo library to import a picture of a supplier bill or cheque you have already taken, so its details can be filled in for you.",
+        "NSCameraUsageDescription": "Ismail Medical uses the camera to scan barcodes and read the batch number on medicine packs, and to photograph supplier bills and cheques, for example to add a strip of paracetamol to a sale in one scan.",
+        "NSPhotoLibraryUsageDescription": "Ismail Medical uses your photo library to import a picture of a supplier bill or cheque you have already taken, so its details can be filled in for you.",
         "ITSAppUsesNonExemptEncryption": false
       }
     },
@@ -32,7 +32,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.ashokemedical.app",
+      "package": "com.ismailmedical.app",
       "softwareKeyboardLayoutMode": "resize",
       "blockedPermissions": [
         "android.permission.RECORD_AUDIO",
@@ -67,7 +67,7 @@
       [
         "expo-camera",
         {
-          "cameraPermission": "Ashoke Medical uses the camera to scan barcodes and read the batch number on medicine packs, and to photograph supplier bills and cheques, for example to add a strip of paracetamol to a sale in one scan.",
+          "cameraPermission": "Ismail Medical uses the camera to scan barcodes and read the batch number on medicine packs, and to photograph supplier bills and cheques, for example to add a strip of paracetamol to a sale in one scan.",
           "microphonePermission": false,
           "recordAudioAndroidPermission": false
         }
@@ -75,8 +75,8 @@
       [
         "expo-image-picker",
         {
-          "photosPermission": "Ashoke Medical uses your photo library to import a picture of a supplier bill or cheque you have already taken, so its details can be filled in for you.",
-          "cameraPermission": "Ashoke Medical uses the camera to scan barcodes and read the batch number on medicine packs, and to photograph supplier bills and cheques, for example to add a strip of paracetamol to a sale in one scan.",
+          "photosPermission": "Ismail Medical uses your photo library to import a picture of a supplier bill or cheque you have already taken, so its details can be filled in for you.",
+          "cameraPermission": "Ismail Medical uses the camera to scan barcodes and read the batch number on medicine packs, and to photograph supplier bills and cheques, for example to add a strip of paracetamol to a sale in one scan.",
           "microphonePermission": false
         }
       ],

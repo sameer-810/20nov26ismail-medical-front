@@ -1,19 +1,19 @@
-# Ashoke Medical — store listing text
+# Ismail Medical — store listing text
 
 For the Google Play and App Store listings, if the app is published there. For a staff-only app, a private channel is usually the better fit: see `ASHOKE_DEPLOYMENT.md` in the project root.
 
 | Field | Text |
 |---|---|
-| App name | Ashoke Medical |
-| Short description (80 characters) | Billing, stock and purchase software for the staff of Ashoke Medical. |
+| App name | Ismail Medical |
+| Short description (80 characters) | Billing, stock and purchase software for the staff of Ismail Medical. |
 | Category | Business |
-| Package / bundle id | `com.ashokemedical.app` |
+| Package / bundle id | `com.ismailmedical.app` |
 | Privacy policy | `https://<web app address>/privacy-policy.html` |
 | Account deletion | `https://<web app address>/delete-account.html` (also in the app: Profile → Delete account) |
 
 ## Full description
 
-Ashoke Medical is the counter software of Ashoke Medical & General Stores, Chemist & Druggist. It is for the store's own staff; an account is created by the store's Admin.
+Ismail Medical is the counter software of Ismail Medical, Chemist & Druggist. It is for the store's own staff; an account is created by the store's Admin.
 
 - Bill at the counter by scanning a barcode or the pack, with batch and expiry picked automatically.
 - Receive stock from a supplier bill, by typing it in or photographing it.
@@ -34,4 +34,4 @@ Ashoke Medical is the counter software of Ashoke Medical & General Stores, Chemi
 
 ## Screenshots
 
-Take them from the running app after the store's own data is in it, so they show Ashoke Medical rather than demo data: `scripts/captureStoreScreens.mjs` then `scripts/makeStoreScreenshots.mjs`.
+Take them from the running app after the store's own data is in it, so they show Ismail Medical rather than demo data: `scripts/captureStoreScreens.mjs` then `scripts/makeStoreScreenshots.mjs`.
